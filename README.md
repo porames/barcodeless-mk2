@@ -4,7 +4,7 @@ The system is the successor of the original Barcodeless System released back in 
 Barcodeless allows users to checkout their items using image recognition and use internet banking (PromptPay) to pay for the items.
 This updated version allows the merchant to add new item to the stock on the fly by taking 10 sample images of the item.
 
-After cloning the repository run
+After cloning the repository install dependencies
 
 ```
 npm install
