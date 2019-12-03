@@ -1,0 +1,72 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "author": {
+    "name": "Porames Vatanaprasan",
+    "email": "s5907258@mwit.ac.th",
+    "url": "https://www.mwit.ac.th"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^3.18.0",
+    "@tensorflow-models/coco-ssd": "^2.0.0",
+    "@tensorflow-models/knn-classifier": "^1.2.1",
+    "@tensorflow-models/mobilenet": "^2.0.4",
+    "@tensorflow/tfjs": "^1.2.8",
+    "axios": "^0.19.0",
+    "electron-is-dev": "^1.1.0",
+    "lodash": "^4.17.15",
+    "promptpay-qr": "^0.4.4",
+    "qrcode": "^1.4.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1",
+    "webcamjs": "^1.0.25"
+  },
+  "main": "public/electron.js",
+  "scripts": {
+    "electron-pack": "build --em.main=build/electron.js",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron-builder": "^21.2.0",
+    "typescript": "^3.6.2"
+  },
+  "build": {
+    "appId": "com.barcodeless.app",
+    "linux": {
+      "target": "deb"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}
